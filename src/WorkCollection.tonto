@@ -1,0 +1,7 @@
+package WorkCollection
+
+kind Work
+
+subkind Book specializes Work
+subkind Periodical specializes Work
+subkind Dvd specializes Work

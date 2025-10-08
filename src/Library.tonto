@@ -1,0 +1,8 @@
+import WorkCollection
+
+package Library
+
+kind Copy {
+    isAvailable: Boolean
+}
+
