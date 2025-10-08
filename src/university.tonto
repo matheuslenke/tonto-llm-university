@@ -1,4 +1,5 @@
 import Datatypes
+import Person
 
 package main
 
@@ -8,7 +9,17 @@ kind University specializes Organization {
     address: Address
 
     @componentOf
-    [1] <>-- has -- [0..*] Classroom
+    [1] <>-- has -- [1..*] Department
+}
+
+kind Department
+
+relator EmploymentContract {
+    @mediation
+    [1] -- is_contracted_by -- [1] University
+
+    @mediation
+    [1] -- contracts -- [1] Employee
 }
 
 kind Room
