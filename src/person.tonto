@@ -1,0 +1,14 @@
+package Person
+
+kind Person
+
+type PersonTypeByAge
+
+phase Child
+phase Teenager
+phase Adult
+
+disjoint complete genset PhasesOfPerson {
+  general Person
+  specifics Child, Teenager, Adult
+}

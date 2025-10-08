@@ -1,0 +1,18 @@
+package main
+
+category Organization
+
+kind University specializes Organization {
+    address: Address
+
+    @componentOf
+    [1] <>-- has -- [0..*] Classroom
+}
+
+datatype Address {
+
+}
+
+kind Room
+
+subkind Classroom specializes Room
