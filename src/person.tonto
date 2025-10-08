@@ -8,9 +8,37 @@ kind Person {
     phoneNumber: PhoneNumber
 }
 
+// Base roles
 role UniversityStudent specializes Person
 role Employee specializes Person
+
+// Employee specializations
 role UniversityProfessor specializes Employee
+role Staff specializes Employee
+role Researcher specializes Employee
+role TechnicalStaff specializes Staff
+role AdministrativeStaff specializes Staff
+
+// Student levels
+role UndergraduateStudent specializes UniversityStudent
+role GraduateStudent specializes UniversityStudent
+role MasterStudent specializes GraduateStudent
+role PhDStudent specializes GraduateStudent
+
+// Academic degrees
+kind Degree {
+    completionDate: Date
+}
+
+subkind BachelorDegree specializes Degree
+subkind MasterDegree specializes Degree
+subkind PhDDegree specializes Degree
+
+datatype Date {
+    day: Number
+    month: Number
+    year: Number
+}
 
 type PersonTypeByAge
 
