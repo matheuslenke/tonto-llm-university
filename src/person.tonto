@@ -1,6 +1,12 @@
+import Datatypes
+
 package Person
 
-kind Person
+kind Person {
+    homeAddress: Address
+    workAddress: Address
+    phoneNumber: PhoneNumber
+}
 
 type PersonTypeByAge
 

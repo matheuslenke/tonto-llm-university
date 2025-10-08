@@ -1,0 +1,14 @@
+package Datatypes
+
+datatype Address {
+    street: String
+    city: String
+    state: String
+    zipCode: String
+}
+
+datatype PhoneNumber {
+    countryCode: String
+    areaCode: String
+    number: String
+}

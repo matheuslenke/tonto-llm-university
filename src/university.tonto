@@ -1,3 +1,5 @@
+import Datatypes
+
 package main
 
 category Organization
@@ -7,10 +9,6 @@ kind University specializes Organization {
 
     @componentOf
     [1] <>-- has -- [0..*] Classroom
-}
-
-datatype Address {
-
 }
 
 kind Room
